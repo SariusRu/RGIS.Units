@@ -10,7 +10,7 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageIcon>Artboard 1.png</PackageIcon>
+    <PackageIcon>RGIS_Logo.png</PackageIcon>
     <PackageIconUrl />
     <RepositoryUrl>https://github.com/SariusRu/RGIS.Units</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -23,18 +23,11 @@
     <Compile Remove="Doxygen\**" />
     <EmbeddedResource Remove="Doxygen\**" />
     <None Remove="Doxygen\**" />
+    <None Include="..\RGIS.Logo\RGIS_Logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
     <None Include="LICENSE">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="..\..\..\..\Downloads\RGIS.Units-main\RGIS.Units-main\LICENSE.txt">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-    <None Include="..\RGIS.Logo\Artboard 1.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
