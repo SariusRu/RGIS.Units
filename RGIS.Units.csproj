@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Authors>Samuel Rundel</Authors>
+    <Product>RGIS</Product>
+    <Description>RGIS is a cloud-based Geographic Information System in the making. RGIS.Units is the first part towards that, implementing all kind of distance units from all over the world and systems.</Description>
+    <Copyright>Samuel Rundel</Copyright>
+    <PackageProjectUrl>gis.run-s.de</PackageProjectUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIcon>Artboard 1.png</PackageIcon>
+    <PackageIconUrl />
+    <RepositoryUrl>https://github.com/SariusRu/RGIS.Units</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>gis distance unit metric imperial conversion</PackageTags>
+    <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
+    <ApplicationIcon>RGIS_Logo.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Doxygen\**" />
+    <EmbeddedResource Remove="Doxygen\**" />
+    <None Remove="Doxygen\**" />
+    <None Include="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\Downloads\RGIS.Units-main\RGIS.Units-main\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\RGIS.Logo\Artboard 1.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
