@@ -1,9 +1,11 @@
-﻿namespace RGIS.Units
+﻿using RGIS.Units.Helper;
+
+namespace RGIS.Units
 {
     public class LightYear : BaseDistance, IDistance
     {
-        internal static double FromMeter { get { return 1.05772481E-16; } }
-        public LightYear(double distance)
+        internal static decimal FromMeter { get { return 1.05772481E-16m; } }
+        public LightYear(decimal distance)
         {
             Distance = distance;
             toMeterConversion = 1 / FromMeter;

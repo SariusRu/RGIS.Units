@@ -1,9 +1,11 @@
-﻿namespace RGIS.Units
+﻿using RGIS.Units.Helper;
+
+namespace RGIS.Units
 {
     public class Megameter : BaseDistance, IDistance
     {
-        internal static double FromMeter { get { return 0.000001; } }
-        public Megameter(double distance)
+        internal static decimal FromMeter { get { return 0.000001m; } }
+        public Megameter(decimal distance)
         {
             Distance = distance;
             toMeterConversion = 1 / FromMeter;

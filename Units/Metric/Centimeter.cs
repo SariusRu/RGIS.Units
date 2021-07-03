@@ -1,10 +1,12 @@
-﻿namespace RGIS.Units
+﻿using RGIS.Units.Helper;
+
+namespace RGIS.Units
 {
     public class Centimeter : BaseDistance, IDistance
     {
-        internal static double FromMeter { get { return 100; } }
+        internal static decimal FromMeter { get { return 100m; } }
 
-        public Centimeter(double distance)
+        public Centimeter(decimal distance)
         {
             Distance = distance;
             toMeterConversion = 1 / FromMeter;

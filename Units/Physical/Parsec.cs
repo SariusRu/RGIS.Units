@@ -1,10 +1,12 @@
-﻿namespace RGIS.Units
+﻿using RGIS.Units.Helper;
+
+namespace RGIS.Units
 {
     public class Parsec : BaseDistance, IDistance
     {
-        internal static double FromMeter { get { return 3.2408E-17; } }
+        internal static decimal FromMeter { get { return 3.2408E-17m; } }
 
-        public Parsec(double distance)
+        public Parsec(decimal distance)
         {
             Distance = distance;
             toMeterConversion = 1 / FromMeter;

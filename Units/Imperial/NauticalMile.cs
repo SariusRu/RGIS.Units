@@ -1,9 +1,11 @@
-﻿namespace RGIS.Units
+﻿using RGIS.Units.Helper;
+
+namespace RGIS.Units
 {
     public class NauticalMile : BaseDistance, IDistance
     {
-        internal static double FromMeter { get { return 0.00053996; } }
-        public NauticalMile(double distance)
+        internal static decimal FromMeter { get { return 0.00053996m; } }
+        public NauticalMile(decimal distance)
         {
             Distance = distance;
             toMeterConversion = 1 / FromMeter;

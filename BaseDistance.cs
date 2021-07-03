@@ -1,12 +1,13 @@
-﻿using System;
+﻿using RGIS.Units.Helper;
+using System;
 
-namespace RGIS.Units
+namespace RGIS.Units.Helper
 {
     public abstract class BaseDistance
     {
-        internal double Distance;
+        internal decimal Distance;
 
-        internal double toMeterConversion;
+        internal decimal toMeterConversion;
 
         public string Description;
 
@@ -17,7 +18,7 @@ namespace RGIS.Units
         /// The conversion is always IDistance (Origin) --> Meter --> IDistance (Destination).
         /// </summary>
         /// <returns>The distance in Meter</returns>
-        private double InMeter()
+        private decimal InMeter()
         {
             return Distance * toMeterConversion;
         }
@@ -25,8 +26,8 @@ namespace RGIS.Units
         /// <summary>
         /// Returns the Distance in the unit of the instance.
         /// </summary>
-        /// <returns>Double: The Distance in the unit of the Instance. Full range of double.</returns>
-        public double Get()
+        /// <returns>decimal: The Distance in the unit of the Instance. Full range of decimal.</returns>
+        public decimal Get()
         {
             return Distance;
         }
@@ -34,8 +35,8 @@ namespace RGIS.Units
         /// <summary>
         /// Sets the distance to the given value in the unit of the instance.
         /// </summary>
-        /// <param name="value">The new value of the Distance-Field as double. Has to be in the unit of the instance.</param>
-        public void Set(double value)
+        /// <param name="value">The new value of the Distance-Field as decimal. Has to be in the unit of the instance.</param>
+        public void Set(decimal value)
         {
             Distance = value;
         }
@@ -104,19 +105,14 @@ namespace RGIS.Units
             return new(InMeter() * LightYear.FromMeter);
         }
 
-        public Planck ToPlanck()
-        {
-            return new(InMeter() * Planck.FromMeter);
-        }
-
         public Dekameter ToDekameter()
         {
             return new(InMeter() * Dekameter.FromMeter);
         }
 
-        public Hektometer ToHektometer()
+        public Hectometer ToHectometer()
         {
-            return new(InMeter() * Hektometer.FromMeter);
+            return new(InMeter() * Hectometer.FromMeter);
         }
 
         public Mikrometer ToMikrometer()
@@ -192,6 +188,19 @@ namespace RGIS.Units
         public Yottameter ToYottameter()
         {
             return new(InMeter() * Yottameter.FromMeter);
+        }
+
+        public override bool Equals(object obj)
+        {
+            var other = obj as IDistance;
+
+            if (other == null)
+                return false;
+
+            if (other.ToMeter().Distance != this.ToMeter().Distance)
+                return false;
+
+            return true;
         }
     }
 }

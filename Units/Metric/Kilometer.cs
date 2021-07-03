@@ -1,9 +1,11 @@
-﻿namespace RGIS.Units
+﻿using RGIS.Units.Helper;
+
+namespace RGIS.Units
 {
     public class Kilometer : BaseDistance, IDistance
     {
-        internal static double FromMeter { get { return 0.001; } }
-        public Kilometer(double distance)
+        internal static decimal FromMeter { get { return 0.001m; } }
+        public Kilometer(decimal distance)
         {
             Distance = distance;
             toMeterConversion = 1 / FromMeter;

@@ -1,21 +1,23 @@
-﻿namespace RGIS.Units
+﻿using RGIS.Units.Helper;
+
+namespace RGIS.Units
 {
-    public class Hektometer : BaseDistance, IDistance
+    public class Hectometer : BaseDistance, IDistance
     {
-        internal static double FromMeter { get { return 0.01; } }
-        public Hektometer(double distance)
+        internal static decimal FromMeter { get { return 0.01m; } }
+        public Hectometer(decimal distance)
         {
             Distance = distance;
             toMeterConversion = 1 / FromMeter;
         }
 
-        public Hektometer(IDistance value)
+        public Hectometer(IDistance value)
         {
-            Distance = value.ToHektometer().Distance;
+            Distance = value.ToHectometer().Distance;
             toMeterConversion = 1 / FromMeter;
         }
 
-        public Hektometer()
+        public Hectometer()
         {
             Distance = 0;
             toMeterConversion = 1 / FromMeter;
@@ -23,7 +25,7 @@
 
         public void Set(IDistance value)
         {
-            Distance = value.ToHektometer().Distance;
+            Distance = value.ToHectometer().Distance;
         }
     }
 }

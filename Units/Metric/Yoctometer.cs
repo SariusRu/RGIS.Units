@@ -1,9 +1,11 @@
-﻿namespace RGIS.Units
+﻿using RGIS.Units.Helper;
+
+namespace RGIS.Units
 {
     public class Yoctometer : BaseDistance, IDistance
     {
-        internal static double FromMeter { get { return 1.0000E+24; } }
-        public Yoctometer(double distance)
+        internal static decimal FromMeter { get { return 1.0000E+24m; } }
+        public Yoctometer(decimal distance)
         {
             Distance = distance;
             toMeterConversion = 1 / FromMeter;

@@ -1,9 +1,11 @@
-﻿namespace RGIS.Units
+﻿using RGIS.Units.Helper;
+
+namespace RGIS.Units
 {
     public class AstronomicalUnit : BaseDistance, IDistance
     {
-        internal static double FromMeter { get { return 6.6846E-12; } }
-        public AstronomicalUnit(double distance)
+        internal static decimal FromMeter { get { return 6.6846E-12m; } }
+        public AstronomicalUnit(decimal distance)
         {
             Distance = distance;
             toMeterConversion = 1 / FromMeter;

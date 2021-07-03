@@ -1,9 +1,11 @@
-﻿namespace RGIS.Units
+﻿using RGIS.Units.Helper;
+
+namespace RGIS.Units
 {
     public class Terameter : BaseDistance, IDistance
     {
-        internal static double FromMeter { get { return 1.0000E-12; } }
-        public Terameter(double distance)
+        internal static decimal FromMeter { get { return 1.0000E-12m; } }
+        public Terameter(decimal distance)
         {
             Distance = distance;
             toMeterConversion = 1 / FromMeter;

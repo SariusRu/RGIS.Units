@@ -1,9 +1,11 @@
-﻿namespace RGIS.Units
+﻿using RGIS.Units.Helper;
+
+namespace RGIS.Units
 {
     public class Yard : BaseDistance, IDistance
     {
-        internal static double FromMeter { get { return 1.0936133; } }
-        public Yard(double distance)
+        internal static decimal FromMeter { get { return 1.0936133m; } }
+        public Yard(decimal distance)
         {
             Distance = distance;
             toMeterConversion = 1 / FromMeter;

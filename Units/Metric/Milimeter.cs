@@ -1,9 +1,11 @@
-﻿namespace RGIS.Units
+﻿using RGIS.Units.Helper;
+
+namespace RGIS.Units
 {
     public class Milimeter : BaseDistance, IDistance
     {
-        internal static double FromMeter { get { return 1000; } }
-        public Milimeter(double distance)
+        internal static decimal FromMeter { get { return 1000m; } }
+        public Milimeter(decimal distance)
         {
             Distance = distance;
             toMeterConversion = 1 / FromMeter;

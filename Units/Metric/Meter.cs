@@ -1,8 +1,10 @@
-﻿namespace RGIS.Units
+﻿using RGIS.Units.Helper;
+
+namespace RGIS.Units
 {
     public class Meter : BaseDistance, IDistance
     {
-        public Meter(double distance)
+        public Meter(decimal distance)
         {
             Distance = distance;
             toMeterConversion = 1;

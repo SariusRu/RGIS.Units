@@ -1,9 +1,11 @@
-﻿namespace RGIS.Units
+﻿using RGIS.Units.Helper;
+
+namespace RGIS.Units
 {
     public class Foot : BaseDistance, IDistance
     {
-        internal static double FromMeter { get { return 3.2808399; } }
-        public Foot(double distance)
+        internal static decimal FromMeter { get { return 3.2808399m; } }
+        public Foot(decimal distance)
         {
             Distance = distance;
             toMeterConversion = 1 / FromMeter;

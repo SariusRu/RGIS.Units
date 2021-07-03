@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace RGIS.Units
+namespace RGIS.Units.Helper
 {
     public static class UnitListings
     {
         private static List<Type> GetUnitList()
         {
-            return Assembly.GetExecutingAssembly().GetTypes().Where(t => t.Namespace == "RGIS.Distance.Units").ToList();
+            return Assembly.GetExecutingAssembly().GetTypes().Where(t => t.Namespace == "RGIS.Units").ToList();
         }
 
         public static List<string> GetDistanceTypes()
@@ -52,7 +52,7 @@ namespace RGIS.Units
 
             foreach (Type currentType in result)
             {
-                IDistance item = assembly.CreateInstance("RGIS.Distance.Units." + currentType.Name) as IDistance;
+                IDistance item = assembly.CreateInstance("RGIS.Units." + currentType.Name) as IDistance;
                 item.Set(value);
                 list.Add(item);
             }

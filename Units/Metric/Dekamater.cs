@@ -1,9 +1,11 @@
-﻿namespace RGIS.Units
+﻿using RGIS.Units.Helper;
+
+namespace RGIS.Units
 {
     public class Dekameter : BaseDistance, IDistance
     {
-        internal static double FromMeter { get { return 0.1; } }
-        public Dekameter(double distance)
+        internal static decimal FromMeter { get { return 0.1m; } }
+        public Dekameter(decimal distance)
         {
             Distance = distance;
             toMeterConversion = 1 / FromMeter;

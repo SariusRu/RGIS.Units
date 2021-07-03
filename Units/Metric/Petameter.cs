@@ -1,9 +1,11 @@
-﻿namespace RGIS.Units
+﻿using RGIS.Units.Helper;
+
+namespace RGIS.Units
 {
     public class Petameter : BaseDistance, IDistance
     {
-        internal static double FromMeter { get { return 1.0000E-15; } }
-        public Petameter(double distance)
+        internal static decimal FromMeter { get { return 1.0000E-15m; } }
+        public Petameter(decimal distance)
         {
             Distance = distance;
             toMeterConversion = 1 / FromMeter;

@@ -1,10 +1,10 @@
-﻿namespace RGIS.Units
+﻿namespace RGIS.Units.Helper
 {
     public interface IDistance
     {
         public void Set(IDistance value);
-        public void Set(double value);
-        public double Get();
+        public void Set(decimal value);
+        public decimal Get();
         public Meter ToMeter();
         public Decimeter ToDecimeter();
         public Centimeter ToCentimeter();
@@ -17,9 +17,8 @@
         public Inch ToInch();
         public Parsec ToParsec();
         public LightYear ToLightYear();
-        public Planck ToPlanck();
         public Dekameter ToDekameter();
-        public Hektometer ToHektometer();
+        public Hectometer ToHectometer();
         public Mikrometer ToMikrometer();
         public Nanometer ToNanometer();
         public AstronomicalUnit ToAstronomicalUnit();
