@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="UnitData" targetNamespace="http://tempuri.org/UnitData.xsd" xmlns:mstns="http://tempuri.org/UnitData.xsd" xmlns="http://tempuri.org/UnitData.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="UnitData" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="UnitData" msprop:Generator_DataSetName="UnitData">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="UnitData" msprop:Generator_RowEvHandlerName="UnitDataRowChangeEventHandler" msprop:Generator_RowDeletedName="UnitDataRowDeleted" msprop:Generator_RowDeletingName="UnitDataRowDeleting" msprop:Generator_RowEvArgName="UnitDataRowChangeEvent" msprop:Generator_TablePropName="_UnitData" msprop:Generator_RowChangedName="UnitDataRowChanged" msprop:Generator_RowChangingName="UnitDataRowChanging" msprop:Generator_TableClassName="UnitDataDataTable" msprop:Generator_RowClassName="UnitDataRow" msprop:Generator_TableVarName="tableUnitData" msprop:Generator_UserTableName="UnitData">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_UserColumnName="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="Abbreviation" msprop:Generator_ColumnPropNameInRow="Abbreviation" msprop:Generator_ColumnPropNameInTable="AbbreviationColumn" msprop:Generator_ColumnVarNameInTable="columnAbbreviation" msprop:Generator_UserColumnName="Abbreviation" type="xs:string" minOccurs="0" />
+              <xs:element name="inMeter" msprop:Generator_ColumnPropNameInRow="inMeter" msprop:Generator_ColumnPropNameInTable="inMeterColumn" msprop:Generator_ColumnVarNameInTable="columninMeter" msprop:Generator_UserColumnName="inMeter" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:UnitData" />
+      <xs:field xpath="mstns:inMeter" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
